@@ -1,0 +1,47 @@
+@import 'tailwind.css';
+
+$duration : 2.25;
+
+#navbar {
+  &.op-dis .navbar {
+    background: none;
+    transition: .3s;
+  }
+  & .navbar {
+    transition: .3s;
+  }
+}
+
+.min-h-75 {
+  min-height: 75vh;
+}
+
+.animation {
+  animation-name: anim;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+  @for $i from 0 through 5 {
+    $d: calc($duration - (4*($i/10)));
+    &.delay-#{$i} {
+      animation-delay: #{calc(2 * $i / 10)}s;
+      animation-duration: #{$d}s;
+    }
+  }
+}
+
+@keyframes anim {
+  0% {
+    opacity: 1;
+    top: -100vh;
+  }
+  40% {
+    top: 0;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: 100vh;
+    opacity: 1;
+  }
+}
