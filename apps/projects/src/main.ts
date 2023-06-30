@@ -1,10 +1,11 @@
 import './app.scss';
 import Home from "./pages/Home.svelte";
 import {Router} from "@anhgelus/functions/src/routing/Router";
-import {Route} from "@anhgelus/functions/src/routing/Route";
 import NotFound from "./pages/common/NotFound.svelte";
 
 import home from "../resources/pages/home.json";
+import Projects from "./pages/Projects.svelte";
+import {events} from "./listeners/projectImage";
 
 const router = new Router()
 
@@ -26,6 +27,21 @@ router.createAndAddRoute("/", () => {
             contents: home,
         }
     });
+});
+
+router.createAndAddRoute("/projects", () => {
+    document.title = newTitle("Projets")
+    new Projects({
+        target: app,
+        props: {
+            bgColor: bgColor,
+            bgColorAccent: bgColorAccent,
+        }
+    });
+}, () => {
+    if (!router.hasQueries()) {
+        events();
+    }
 });
 
 router.createAndAddRoute("404", () => {

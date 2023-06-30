@@ -12,5 +12,5 @@
 
 <div class="navbar {bgColor}">
     <NavbarTitle name={name} />
-    <NavbarRight {bgColor}/>
+    <NavbarRight {bgColor} {links}/>
 </div>

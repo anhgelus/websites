@@ -3,4 +3,20 @@ module.exports = {
   content: ['./node_modules/@anhgelus/**/*.{svelte,js,ts}', './src/**/*.{svelte,js,ts}'],
   plugins: [require("@tailwindcss/typography"),require('daisyui')],
   themes: ["light", "dark"],
+  theme: {
+    extend: {
+      minHeight: {
+        '66': '66vh',
+        '2': '2vh',
+        '1': '1vh',
+      },
+      aspectRatio: {
+        'project-image': '1920/712',
+      },
+      margin: {
+        '4/10': '40%',
+        '3/10': '30%',
+      }
+    }
+  }
 };

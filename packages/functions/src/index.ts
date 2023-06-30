@@ -1,4 +1,5 @@
 import {marked} from "marked";
+// @ts-ignore
 import {mangle} from "marked-mangle";
 
 marked.use(mangle(), {

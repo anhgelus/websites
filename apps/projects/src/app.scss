@@ -1,14 +1,16 @@
 @import 'tailwind.css';
 
 $duration : 2.25;
+$transistion-std: .5s;
+$fast-transistion-std: .3s;
 
 #navbar {
   &.op-dis .navbar {
     background: none;
-    transition: .3s;
+    transition: $fast-transistion-std;
   }
   & .navbar {
-    transition: .3s;
+    transition: $fast-transistion-std;
   }
 }
 
@@ -43,5 +45,16 @@ $duration : 2.25;
   100% {
     top: 100vh;
     opacity: 1;
+  }
+}
+
+.project-image {
+  & div { transition: $transistion-std; }
+  & img { transition: $transistion-std; }
+  &.is-active {
+    & img { filter: brightness(0); }
+    & div {
+      letter-spacing: 1rem;
+    }
   }
 }
