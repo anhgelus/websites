@@ -1,7 +1,7 @@
 <script>
     import Title from "../../Atoms/Title/Title.svelte";
     import ButtonPrimary from "../../Atoms/Button/ButtonPrimary.svelte";
-    import BigSpacyText from "../../Atoms/Text/BigSpacyText.svelte";
+    import Subtitle from "../../Atoms/Title/Subtitle.svelte";
     export let title = '';
     export let description = '';
     export let btn = '';
@@ -15,7 +15,7 @@
         <div class="hero-content text-center">
             <div class="max-w-md">
                 <Title name="{title}"/>
-                <BigSpacyText text="{description}" />
+                <Subtitle name="{description}" />
                 <ButtonPrimary name="{btn}" href="{btnHref}"/>
             </div>
         </div>
@@ -25,7 +25,7 @@
         <div class="hero-content text-center">
             <div class="max-w-md">
                 <Title name="{title}"/>
-                <BigSpacyText text="{description}" />
+                <Subtitle name="{description}" />
                 <ButtonPrimary name="{btn}" href="{btnHref}"/>
             </div>
         </div>

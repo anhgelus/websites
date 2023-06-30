@@ -1,6 +1,6 @@
 <script>
     import Title from "../../Atoms/Title/Title.svelte";
-    import BigSpacyText from "../../Atoms/Text/BigSpacyText.svelte";
+    import Subtitle from "../../Atoms/Title/Subtitle.svelte";
 
     export let title = '';
     export let description = '';
@@ -14,7 +14,7 @@
         <div class="hero-content text-center">
             <div class="max-w-md">
                 <Title name="{title}"/>
-                <BigSpacyText text="{description}" />
+                <Subtitle name="{description}" />
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         <div class="hero-content text-center">
             <div class="max-w-md">
                 <Title name="{title}"/>
-                <BigSpacyText text="{description}" />
+                <Subtitle name="{description}" />
             </div>
         </div>
     </div>

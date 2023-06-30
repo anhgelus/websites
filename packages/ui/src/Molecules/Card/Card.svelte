@@ -1,5 +1,5 @@
 <script>
-    import ParagraphText from "../Paragraph/ParagraphText.svelte";
+    import ParagraphText from "../../Atoms/Paragraph/ParagraphText.svelte";
     import Button from "../../Atoms/Button/Button.svelte";
     import ButtonPrimary from "../../Atoms/Button/ButtonPrimary.svelte";
 

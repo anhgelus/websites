@@ -1,6 +1,6 @@
 <script>
     import {Request} from "@anhgelus/functions/src/query/Request"
-    import Button from "../../Atoms/Button/Button.svelte";
+    import Button from "../Button/Button.svelte";
 
     export let path = "hello-world";
     path = path.replace(".", "/");

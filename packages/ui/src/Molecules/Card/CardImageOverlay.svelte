@@ -1,5 +1,5 @@
 <script>
-    import ParagraphText from "../Paragraph/ParagraphText.svelte";
+    import ParagraphText from "../../Atoms/Paragraph/ParagraphText.svelte";
     import Button from "../../Atoms/Button/Button.svelte";
     import ButtonPrimary from "../../Atoms/Button/ButtonPrimary.svelte";
 
@@ -16,7 +16,11 @@
     <figure><img src={image} alt={alt} /></figure>
     <div class="card-body">
         <h2 class="card-title">{title}</h2>
-        <ParagraphText text={content} isJustify="true" />
+        <div class="test-justify">
+            {#each content as c}
+                <p>{c}</p>
+            {/each}
+        </div>
         <div class="card-actions justify-end">
             {#if isBtnPrimary}
                 <ButtonPrimary name={btn} href={btnLink} />

@@ -1,4 +1,4 @@
-import Teams from './Teams.svelte'
+import ParagraphImage from './ParagraphImage.svelte'
 
 //👇This default export determines where your story goes in the story list
 export default {
@@ -6,8 +6,8 @@ export default {
      * See https://storybook.js.org/docs/7.0/svelte/configure/overview#configure-story-loading
      * to learn how to generate automatic titles
      */
-    title: 'Molecules/Team/Teams',
-    component: Teams,
+    title: 'Organisms/Contents/ParagraphImage',
+    component: ParagraphImage,
 };
 
 /*
@@ -15,12 +15,23 @@ export default {
  * See https://storybook.js.org/docs/7.0/svelte/api/csf
  * to learn how to use render functions.
  */
-export const TeamsStory = {
+export const ParagraphImageStory = {
     render: (args) => ({
-        Component: Teams,
+        Component: ParagraphImage,
         props: args,
     }),
     args: {
-        //👇 The args you need here will depend on your component
+        contents: [
+            {
+                "file": "home.presentation",
+                "image": "https://picsum.photos/1920/1080",
+                "alt": "Image"
+            },
+            {
+                "file": "home.website-content",
+                "image": "https://picsum.photos/900/600",
+                "alt": "Image"
+            }
+        ]
     },
 };

@@ -2,7 +2,7 @@
 
 Mono repo of all anhgelus World websites
 
-## Sites
+## Websites
 
 - [anhgelus World Projects](https://projects.anhgelus.world) folder `apps/projects`
 
