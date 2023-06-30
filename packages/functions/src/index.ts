@@ -1,3 +1,11 @@
+import {marked} from "marked";
+import {mangle} from "marked-mangle";
+
+marked.use(mangle(), {
+    //@ts-ignore
+    headerIds: false
+})
+
 export function genSlug(str: string): string {
     return str.toLowerCase()
         .replace(" ", "-")

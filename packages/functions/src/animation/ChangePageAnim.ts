@@ -1,5 +1,5 @@
 export class ChangePageAnim {
-    public readonly colors = ["bg-primary", "bg-success", "bg-neutral", "bg-success"]
+    public readonly colors = ["bg-primary", "bg-secondary", "bg-neutral", "bg-success"]
 
     private parent: HTMLDivElement;
 

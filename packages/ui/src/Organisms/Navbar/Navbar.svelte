@@ -4,6 +4,10 @@
 
     export let name = '';
     export let bgColor = 'base-100';
+    export let links = [{
+        name: 'Home',
+        href: '/'
+    }];
 </script>
 
 <div class="navbar {bgColor}">

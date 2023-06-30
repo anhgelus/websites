@@ -4,6 +4,8 @@ import {Router} from "@anhgelus/functions/src/routing/Router";
 import {Route} from "@anhgelus/functions/src/routing/Route";
 import NotFound from "./pages/common/NotFound.svelte";
 
+import home from "../resources/pages/home.json";
+
 const router = new Router()
 
 export const app = document.querySelector("#app")!;
@@ -21,6 +23,7 @@ router.addRoute(new Route("/", () => {
         props: {
             bgColor: bgColor,
             bgColorAccent: bgColorAccent,
+            contents: home,
         }
     });
 }));

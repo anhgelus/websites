@@ -14,6 +14,13 @@
             }
         }
     }
+
+    const links = [
+        {
+            name: "Home",
+            href: "/",
+        }
+    ]
 </script>
 
 <style>
@@ -24,4 +31,4 @@
 
 <svelte:window on:scroll={displayNavbar} />
 
-<div class="op-dis fixed w-screen z-25" id="navbar"><Navbar name="anhgelus World" {bgColor}/></div>
+<div class="op-dis fixed w-screen z-25" id="navbar"><Navbar name="AW Projects" {bgColor} {links}/></div>
