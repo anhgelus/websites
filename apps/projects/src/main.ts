@@ -16,7 +16,7 @@ function newTitle(base: string): string {
     return base + " - anhgelus World Projects"
 }
 
-router.addRoute(new Route("/", () => {
+router.createAndAddRoute("/", () => {
     document.title = newTitle("Accueil")
     new Home({
         target: app,
@@ -26,13 +26,13 @@ router.addRoute(new Route("/", () => {
             contents: home,
         }
     });
-}));
+});
 
-router.addRoute(new Route("404", () => {
+router.createAndAddRoute("404", () => {
     document.title = newTitle("Oh no, 404")
     new NotFound({
         target: app
     });
-}));
+});
 
 router.route(window.location.pathname)

@@ -65,6 +65,10 @@ export class Router {
         this.routes.push(route);
     }
 
+    public createAndAddRoute(path: string, fn: (arg0: Router) => void, exec: (arg0: Router) => void|null = () => null): void {
+        this.routes.push(new Route(path, fn, exec));
+    }
+
     /**
      * Get all routes.
      */
