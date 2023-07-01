@@ -3,5 +3,5 @@
 </script>
 
 <div class="grid grid-flow-col gap-4">
-    <LinkHoverUnderlined content="Discord" href="https://discord.gg/MwE6nW9aCT" isBlank="true"/>
+    <LinkHoverUnderlined content="Discord" href="https://discord.gg/qhjRa64nPE" isBlank="true"/>
 </div>
