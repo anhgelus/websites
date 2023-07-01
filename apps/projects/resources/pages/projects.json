@@ -24,11 +24,18 @@
       },
       "links": [
         {
-          "name": "",
-          "href": "",
+          "name": "Presentation video (french)",
+          "href": "https://youtu.be/frojY_kjBLE",
           "primary": false,
           "secondary": false,
-          "external": false
+          "external": true
+        },
+        {
+          "name": "GitHub",
+          "href": "https://github.com/msmp-mc",
+          "primary": true,
+          "secondary": false,
+          "external": true
         }
       ],
       "credits": "",

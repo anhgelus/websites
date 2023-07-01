@@ -3,6 +3,7 @@
     import Footer from "../common/Footer.svelte";
     import CenteredHeroOverlayBtn from "@anhgelus/ui/src/Molecules/Hero/CenteredHeroOverlayBtn.svelte";
     import ParagraphImage from "@anhgelus/ui/src/Organisms/Contents/ParagraphImage.svelte";
+    import Links from "@anhgelus/ui/src/Organisms/Contents/Links.svelte";
     import ButtonEndPage from "@anhgelus/ui/src/Atoms/Button/ButtonEndPage.svelte";
 
     export let bgColorAccent, bgColor;
@@ -52,6 +53,9 @@
         const c = project.content
         return [c.presentation, c.faq, c.docs, c.specific]
     }
+
+    let links = () => project.content.links
+
 </script>
 
 <Header bgColor="{bgColorAccent}"/>
@@ -61,6 +65,7 @@
 
 <section class="mx-auto max-w-6xl mt-14" id="scrolled">
     <ParagraphImage contents={contents()} />
+    <Links links={links()} />
 </section>
 
 <ButtonEndPage name="Discover other projects" href="/projects" />
