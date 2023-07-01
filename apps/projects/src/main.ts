@@ -2,12 +2,17 @@ import './app.scss';
 import Home from "./pages/Home.svelte";
 import {Router} from "@anhgelus/functions/src/routing/Router";
 import NotFound from "./pages/common/NotFound.svelte";
-
-import home from "../resources/pages/home.json";
 import Projects from "./pages/Projects.svelte";
+import ProjectRender from "./pages/project/Project.svelte";
 import {events} from "./listeners/projectImage";
 
+import home from "../resources/pages/home.json";
+import rawProjects from "../resources/pages/projects.json";
+import {genSlug, Project} from "@anhgelus/functions";
+
 const router = new Router()
+// @ts-ignore
+const projects: Project[] = rawProjects
 
 export const app = document.querySelector("#app")!;
 export const bgColor = 'bg-base-100';
@@ -36,6 +41,7 @@ router.createAndAddRoute("/projects", () => {
         props: {
             bgColor: bgColor,
             bgColorAccent: bgColorAccent,
+            projects: projects,
         }
     });
 }, () => {
@@ -44,13 +50,20 @@ router.createAndAddRoute("/projects", () => {
     }
 });
 
-router.createAndAddRoute("/projects/{slug}", () => {
-    document.title = newTitle("Projets")
-    new Projects({
+router.createAndAddRoute("/projects/{slug}", (data) => {
+    let slug = data.params.get("slug")!;
+    let project = projects.find(p => genSlug(p.name) === slug);
+    if (project === undefined) {
+        router.notFound();
+        return;
+    }
+    document.title = newTitle(`${project.name} - Projets`)
+    new ProjectRender({
         target: app,
         props: {
             bgColor: bgColor,
             bgColorAccent: bgColorAccent,
+            project: project,
         }
     });
 }, () => {

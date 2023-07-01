@@ -1,0 +1,43 @@
+[
+  {
+    "name": "MSMP",
+    "image": "https://picsum.photos/1920/1080",
+    "description": "A fusion between a classic SMP and a procedurally generated maze",
+    "content": {
+      "presentation": {
+        "file": "projects.msmp.presentation",
+        "image": "",
+        "alt": "",
+        "asImage": false
+      },
+      "faq": {
+        "file": "projects.msmp.faq",
+        "image": "",
+        "alt": "",
+        "asImage": false
+      },
+      "docs": {
+        "file": "projects.msmp.docs",
+        "image": "",
+        "alt": "",
+        "asImage": false
+      },
+      "links": [
+        {
+          "name": "",
+          "href": "",
+          "primary": false,
+          "secondary": false,
+          "external": false
+        }
+      ],
+      "credits": "",
+      "specific": {
+        "file": "projects.msmp.specific",
+        "image": "",
+        "alt": "",
+        "asImage": false
+      }
+    }
+  }
+]

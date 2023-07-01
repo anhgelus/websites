@@ -6,19 +6,26 @@
         {
             file: "home.presentation",
             image: "https://placekitten.com/1920/1080",
-            alt: "Image"
+            alt: "Image",
+            asImage: true
         }
     ]
+
+    $: console.log(contents)
 </script>
 
-<div class="grid grid-cols-2 justify-center items-center gap-x-24 gap-y-36">
-    {#each contents as c, i}
-        {#if i%2 === 0}
+{#each contents as c, i}
+    {#if !c.asImage}
+        <Paragraph path={c.file}/>
+    {:else if i%2 === 0}
+        <div class="grid grid-cols-2 justify-center items-center gap-x-24 gap-y-36">
             <Paragraph path={c.file}/>
             <Image src={c.image} alt={c.alt} customClass="mx-auto rounded-md" />
-        {:else}
+        </div>
+    {:else}
+        <div class="grid grid-cols-2 justify-center items-center gap-x-24 gap-y-36">
             <Image src={c.image} alt={c.alt} customClass="mx-auto rounded-md" />
             <Paragraph path={c.file}/>
-        {/if}
-    {/each}
-</div>
+        </div>
+    {/if}
+{/each}

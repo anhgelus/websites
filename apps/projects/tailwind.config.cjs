@@ -10,9 +10,6 @@ module.exports = {
         '2': '2vh',
         '1': '1vh',
       },
-      aspectRatio: {
-        'project-image': '1920/712',
-      },
       margin: {
         '4/10': '40%',
         '3/10': '30%',

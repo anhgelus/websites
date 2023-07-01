@@ -50,9 +50,9 @@ $fast-transistion-std: .3s;
 
 .project-image {
   & div { transition: $transistion-std; }
-  & img { transition: $transistion-std; }
+  & .bg { transition: $transistion-std; }
   &.is-active {
-    & img { filter: brightness(0); }
+    & .bg { filter: brightness(0); }
     & div {
       letter-spacing: 1rem;
     }

@@ -13,3 +13,34 @@ export function genSlug(str: string): string {
         .replace('é', 'e')
         .replace('ô', 'o')
 }
+
+export type Content = {
+    file: string
+    image: string
+    alt: string
+    asImage: boolean
+}
+
+export type Link = {
+    name: string
+    href: string
+    primary: boolean
+    secondary: boolean
+    external: boolean
+}
+
+export type ProjectContent = {
+    presentation: Content
+    faq: Content
+    docs: Content
+    credits: string
+    links: Link[]
+    specific: Content
+}
+
+export type Project = {
+    name: string
+    image: string
+    description: string
+    content: ProjectContent
+}

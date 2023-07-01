@@ -16,7 +16,7 @@
 
 <a href="/projects/{genSlug(projectName)}">
     <div class=" h-full w-full flex items-center relative min-h-66 max-w-full project-image">
-        <img src={image} alt="" class="absolute w-full h-full brightness-50 aspect-project-image z-0">
+        <div class="absolute w-full h-full brightness-50 z-0 bg" style="background: url({image})"></div>
         <div class="text-accent-content relative z-10 uppercase {clazz()}">
             <Title name={projectName} />
         </div>

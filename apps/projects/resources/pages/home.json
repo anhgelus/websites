@@ -2,11 +2,13 @@
   {
     "file": "home.presentation",
     "image": "https://picsum.photos/1920/1080",
-    "alt": "Image"
+    "alt": "Image",
+    "asImage": true
   },
   {
     "file": "home.website-content",
     "image": "https://picsum.photos/900/600",
-    "alt": "Image"
+    "alt": "Image",
+    "asImage": true
   }
 ]

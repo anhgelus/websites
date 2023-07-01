@@ -3,7 +3,7 @@
     import Button from "../Button/Button.svelte";
 
     export let path = "hello-world";
-    path = path.replace(".", "/");
+    path = path.replaceAll(".", "/");
 
     export let barTop = false;
     export let barBottom = false;
@@ -19,7 +19,7 @@
 {#await content}
     <Button isDisabled=true name="Loading" customClass="loading-spinner loading loading-md" />
 {:then data}
-    <div class="my-12 prose">
+    <div class="my-12 prose max-w-full">
         {@html data}
     </div>
 {:catch error}

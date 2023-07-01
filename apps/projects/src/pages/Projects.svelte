@@ -5,10 +5,16 @@
     import ProjectSeparator from "../specific/ProjectSeparator.svelte";
 
     export let bgColorAccent, bgColor;
+    export let projects = [{
+        "name": "",
+        "image": "",
+        "description": ""
+    }]
 </script>
 
 <Header bgColor="{bgColorAccent}"/>
-<ProjectImage image="https://placekitten.com/1920/712" projectName="Test" />
-<ProjectSeparator bgColor="{bgColor}" />
-<ProjectImage image="https://placekitten.com/1920/712" projectName="Test 2 " right />
+{#each projects as project}
+    <ProjectImage image={project.image} projectName={project.name} />
+    <ProjectSeparator bgColor={bgColor} />
+{/each}
 <Footer bgColor="{bgColorAccent}" noSpace="true"/>
