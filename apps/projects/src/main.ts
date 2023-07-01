@@ -44,6 +44,21 @@ router.createAndAddRoute("/projects", () => {
     }
 });
 
+router.createAndAddRoute("/projects/{slug}", () => {
+    document.title = newTitle("Projets")
+    new Projects({
+        target: app,
+        props: {
+            bgColor: bgColor,
+            bgColorAccent: bgColorAccent,
+        }
+    });
+}, () => {
+    if (!router.hasQueries()) {
+        events();
+    }
+});
+
 router.createAndAddRoute("404", () => {
     document.title = newTitle("Oh no, 404")
     new NotFound({

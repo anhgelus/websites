@@ -1,4 +1,4 @@
-import {Route} from "./Route";
+import {Route, RouteData} from "./Route";
 import {ChangePageAnim} from "../animation/ChangePageAnim";
 
 /**
@@ -65,7 +65,7 @@ export class Router {
         this.routes.push(route);
     }
 
-    public createAndAddRoute(path: string, fn: (arg0: Router) => void, exec: (arg0: Router) => void|null = () => null): void {
+    public createAndAddRoute(path: string, fn: (arg0: RouteData) => void, exec: (arg0: RouteData) => void|null = () => null): void {
         this.routes.push(new Route(path, fn, exec));
     }
 
@@ -83,7 +83,7 @@ export class Router {
     public getRoute(path: string): Route | null {
         let r = null;
         this.routes.forEach(route => {
-            if (route.path === path) {
+            if (route.isPathValid(path)) {
                 r = route;
             }
         });
@@ -102,8 +102,9 @@ export class Router {
             this.notFound();
             return
         }
-        route.fn(this);
-        route.exec(this);
+        const data = new RouteData(this, route.getParams(path));
+        route.fn(data);
+        route.exec(data);
     }
 
     /**
@@ -145,7 +146,7 @@ export class Router {
         if (notFound == null) {
             throw new Error(`Impossible to find the route for the error 404.`);
         }
-        notFound.fn(this);
+        notFound.fn(new RouteData(this, new Map<string,string>()));
     }
 
     /**
