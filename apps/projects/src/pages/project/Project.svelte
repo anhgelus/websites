@@ -5,6 +5,7 @@
     import ParagraphImage from "@anhgelus/ui/src/Organisms/Contents/ParagraphImage.svelte";
     import Links from "@anhgelus/ui/src/Organisms/Contents/Links.svelte";
     import ButtonEndPage from "@anhgelus/ui/src/Atoms/Button/ButtonEndPage.svelte";
+    import Prose from "@anhgelus/ui/src/Atoms/Contents/Prose.svelte";
 
     export let bgColorAccent, bgColor;
     export let project = {
@@ -56,6 +57,10 @@
 
     let links = () => project.content.links
 
+    let data = () => {
+        return `<h2>Credits</h2><p>${project.content.credits}</p>`
+    }
+
 </script>
 
 <Header bgColor="{bgColorAccent}"/>
@@ -65,6 +70,9 @@
 
 <section class="mx-auto max-w-6xl mt-14" id="scrolled">
     <ParagraphImage contents={contents()} />
+    <div class="my-16">
+        <Prose data={data()} />
+    </div>
     <Links links={links()} />
 </section>
 

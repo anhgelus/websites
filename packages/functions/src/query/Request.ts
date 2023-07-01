@@ -9,9 +9,7 @@ export class Request {
     constructor(
         public readonly path: string,
         public readonly ext: string,
-    ) {
-
-    }
+    ) {}
 
     /**
      * Generate the url of the request.

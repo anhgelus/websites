@@ -1,6 +1,6 @@
 <script>
     import Image from "../../Atoms/Image/Image.svelte";
-    import Paragraph from "../../Atoms/Paragraph/Paragraph.svelte";
+    import Paragraph from "../../Molecules/Contents/Paragraph.svelte";
 
     export let contents = [
         {
