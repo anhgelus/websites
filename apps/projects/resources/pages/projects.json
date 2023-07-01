@@ -6,15 +6,15 @@
     "content": {
       "presentation": {
         "file": "presentation",
-        "image": "",
-        "alt": "",
-        "asImage": false
+        "image": "maze.jpg",
+        "alt": "Screenshot of inside the maze",
+        "asImage": true
       },
       "faq": {
         "file": "faq",
-        "image": "",
-        "alt": "",
-        "asImage": false
+        "image": "maze-2.jpg",
+        "alt": "Screenshot of the maze from above",
+        "asImage": true
       },
       "docs": {
         "file": "docs",
