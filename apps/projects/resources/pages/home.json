@@ -1,13 +1,13 @@
 [
   {
     "file": "home.presentation",
-    "image": "https://picsum.photos/1920/1080",
-    "alt": "Image",
+    "image": "/logo-low.jpg",
+    "alt": "The logo of anhgelus World, made by Dall.E 2",
     "asImage": true
   },
   {
     "file": "home.website-content",
-    "image": "https://picsum.photos/900/600",
+    "image": "/library.jpg",
     "alt": "Image",
     "asImage": true
   }

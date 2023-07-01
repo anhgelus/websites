@@ -19,7 +19,7 @@
 <Header bgColor="{bgColorAccent}"/>
 
 <CenteredHeroOverlayBtn title="AW Projects" description="The project to govern them all!" {bgColor}
-                        image="https://placekitten.com/1920/1080" btn="What?" btnHref="#scrolled"/>
+                        image="/home-wallpaper.jpg" btn="What?" btnHref="#scrolled"/>
 <section class="mx-auto max-w-6xl mt-14" id="scrolled">
     <ParagraphImage {contents} />
 </section>
