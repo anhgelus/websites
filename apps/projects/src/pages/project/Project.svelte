@@ -79,7 +79,7 @@
 
 <section class="mx-auto max-w-6xl mt-14" id="scrolled">
     <ParagraphImage contents={contents()} />
-    <div class="my-16">
+    <div class="my-16 mx-8 xl:mx-0">
         <Prose data={data()} />
     </div>
     <Links links={links()} />

@@ -13,7 +13,7 @@
     ]
 </script>
 
-<div class="flex items-center justify-center gap-12">
+<div class="flex items-center justify-center md:gap-12 gap-6 sm:flex-row flex-col-reverse">
     {#each links as link}
         {#if link.primary}
             {#if link.external}
