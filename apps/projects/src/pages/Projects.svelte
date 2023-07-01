@@ -13,8 +13,14 @@
 </script>
 
 <Header bgColor="{bgColorAccent}"/>
-{#each projects as project}
-    <ProjectImage image={project.image} projectName={project.name} />
-    <ProjectSeparator bgColor={bgColor} />
+{#each projects as project, i}
+    {#if i%2 !== 0}
+        <ProjectImage image={project.image} projectName={project.name} right />
+    {:else }
+        <ProjectImage image={project.image} projectName={project.name} />
+    {/if}
+    {#if i !== projects.length - 1}
+        <ProjectSeparator bgColor={bgColor} />
+    {/if}
 {/each}
 <Footer bgColor="{bgColorAccent}" noSpace="true"/>

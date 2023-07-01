@@ -13,7 +13,7 @@
 </script>
 
 {#if !isNotFullHeight}
-    <div class="hero min-h-screen {bgColor}" style="background-image: url({image});">
+    <div class="hero min-h-screen {bgColor}" style="background: fixed url({image});">
         <div class="hero-overlay bg-opacity-60"></div>
         <div class="hero-content text-center">
             <div class="max-w-md">

@@ -38,7 +38,55 @@
           "external": true
         }
       ],
-      "credits": "",
+      "credits": "This project was made by the anhgelus World team, every contributor is credited on GitHub",
+      "specific": {
+        "file": "projects.msmp.specific",
+        "image": "",
+        "alt": "",
+        "asImage": false
+      }
+    }
+  },
+  {
+    "name": "Biotechnica Challenge",
+    "image": "/projects/biotechnica-challenge/wallpaper-day.jpg",
+    "description": "Modded reverse Manhunt",
+    "content": {
+      "presentation": {
+        "file": "projects.biotechnica-challenge.presentation",
+        "image": "/projects/biotechnica-challenge/wallpaper-night.jpg",
+        "alt": "Wallpaper Night",
+        "asImage": true
+      },
+      "faq": {
+        "file": "projects.biotechnica-challenge.faq",
+        "image": "",
+        "alt": "",
+        "asImage": false
+      },
+      "docs": {
+        "file": "projects.biotechnica-challenge.docs",
+        "image": "",
+        "alt": "",
+        "asImage": false
+      },
+      "links": [
+        {
+          "name": "Presentation video (french)",
+          "href": "https://www.youtu.be/L0vZBWEqbUU",
+          "primary": false,
+          "secondary": false,
+          "external": true
+        },
+        {
+          "name": "GitHub",
+          "href": "https://github.com/anhgelus/biotechnica-challenge",
+          "primary": true,
+          "secondary": false,
+          "external": true
+        }
+      ],
+      "credits": "This project was made by the anhgelus, with the help from SuperNoobYT and Xav",
       "specific": {
         "file": "projects.msmp.specific",
         "image": "",

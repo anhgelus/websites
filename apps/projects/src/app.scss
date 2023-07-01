@@ -36,10 +36,10 @@ $fast-transistion-std: .3s;
     opacity: 1;
     top: -100vh;
   }
-  40% {
+  47% {
     top: 0;
   }
-  50% {
+  53% {
     top: 0;
   }
   100% {
@@ -49,12 +49,12 @@ $fast-transistion-std: .3s;
 }
 
 .project-image {
-  & div { transition: $transistion-std; }
+  & div { transition: $transistion-std; letter-spacing: 0.1rem; }
   & .bg { transition: $transistion-std; }
   &.is-active {
     & .bg { filter: brightness(0); }
     & div {
-      letter-spacing: 1rem;
+      letter-spacing: 0.75rem;
     }
   }
 }
