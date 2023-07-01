@@ -54,7 +54,10 @@ $fast-transistion-std: .3s;
   &.is-active {
     & .bg { filter: brightness(0); }
     & div {
-      letter-spacing: 0.75rem;
+      @media (min-width: 1536px) {
+        letter-spacing: 0.75rem;
+      }
+      letter-spacing: 0.25rem;
     }
   }
 }

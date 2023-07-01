@@ -2,4 +2,4 @@
     export let name;
 </script>
 
-<p class="text-xl py-6">{name}</p>
+<p class="sm:text-xl text-lg py-6">{name}</p>

@@ -6,6 +6,8 @@ module.exports = {
   theme: {
     extend: {
       minHeight: {
+        '80': '80vh',
+        '75': '75vh',
         '66': '66vh',
         '2': '2vh',
         '1': '1vh',

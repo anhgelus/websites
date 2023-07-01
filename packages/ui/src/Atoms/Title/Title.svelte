@@ -10,4 +10,4 @@
     }
 </script>
 
-<h1 class="font-bold text-5xl {clazz()}">{name}</h1>
+<h1 class="font-bold sm:text-5xl text-4xl {clazz()}">{name}</h1>
