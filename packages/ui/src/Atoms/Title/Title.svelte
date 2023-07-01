@@ -1,9 +1,13 @@
 <script>
     export let name = '';
     export let center = false;
+    export let clickable = false;
+    const clazz = () => {
+        let clazz = '';
+        if (clickable) clazz += ' clickable';
+        if (center) clazz += ' text-center';
+        return clazz;
+    }
 </script>
-{#if center}
-    <h1 class="font-bold text-5xl text-center">{name}</h1>
-{:else}
-    <h1 class="font-bold text-5xl">{name}</h1>
-{/if}
+
+<h1 class="font-bold text-5xl {clazz()}">{name}</h1>

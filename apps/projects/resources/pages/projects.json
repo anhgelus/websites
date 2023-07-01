@@ -1,7 +1,7 @@
 [
   {
     "name": "MSMP",
-    "image": "https://picsum.photos/1920/1080",
+    "image": "/projects/msmp/wallpaper.jpg",
     "description": "A fusion between a classic SMP and a procedurally generated maze",
     "content": {
       "presentation": {

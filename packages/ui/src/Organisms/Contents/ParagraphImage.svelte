@@ -10,20 +10,20 @@
             asImage: true
         }
     ]
-
-    $: console.log(contents)
 </script>
 
 {#each contents as c, i}
     {#if !c.asImage}
-        <Paragraph path={c.file}/>
+        <div class="mx-8 xl:mx-0">
+            <Paragraph path={c.file}/>
+        </div>
     {:else if i%2 === 0}
-        <div class="grid grid-cols-2 justify-center items-center gap-x-24 gap-y-36">
+        <div class="grid grid-cols-2 justify-center items-center gap-x-24 gap-y-36 mx-8 xl:mx-0">
             <Paragraph path={c.file}/>
             <Image src={c.image} alt={c.alt} customClass="mx-auto rounded-md" />
         </div>
     {:else}
-        <div class="grid grid-cols-2 justify-center items-center gap-x-24 gap-y-36">
+        <div class="grid grid-cols-2 justify-center items-center gap-x-24 gap-y-36 mx-8 xl:mx-0">
             <Image src={c.image} alt={c.alt} customClass="mx-auto rounded-md" />
             <Paragraph path={c.file}/>
         </div>
