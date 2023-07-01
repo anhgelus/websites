@@ -3,6 +3,7 @@
     import Footer from "./common/Footer.svelte";
     import ProjectImage from "../specific/ProjectImage.svelte";
     import ProjectSeparator from "../specific/ProjectSeparator.svelte";
+    import {genLinkFromProject} from "@anhgelus/functions";
 
     export let bgColorAccent, bgColor;
     export let projects = [{
@@ -15,9 +16,9 @@
 <Header bgColor="{bgColorAccent}"/>
 {#each projects as project, i}
     {#if i%2 !== 0}
-        <ProjectImage image={project.image} projectName={project.name} right />
+        <ProjectImage image={genLinkFromProject(project.name, project.image)} projectName={project.name} right />
     {:else }
-        <ProjectImage image={project.image} projectName={project.name} />
+        <ProjectImage image={genLinkFromProject(project.name, project.image)} projectName={project.name} />
     {/if}
     {#if i !== projects.length - 1}
         <ProjectSeparator bgColor={bgColor} />

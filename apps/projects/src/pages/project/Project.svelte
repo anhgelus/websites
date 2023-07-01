@@ -6,6 +6,7 @@
     import Links from "@anhgelus/ui/src/Organisms/Contents/Links.svelte";
     import ButtonEndPage from "@anhgelus/ui/src/Atoms/Button/ButtonEndPage.svelte";
     import Prose from "@anhgelus/ui/src/Atoms/Contents/Prose.svelte";
+    import {genLinkFromProject, genPathFromProject} from "@anhgelus/functions";
 
     export let bgColorAccent, bgColor;
     export let project = {
@@ -14,19 +15,19 @@
         "description": "",
         "content": {
             "presentation": {
-                "path": "",
+                "file": "",
                 "image": "",
                 "alt": "",
                 "asImage": false
             },
             "faq": {
-                "path": "",
+                "file": "",
                 "image": "",
                 "alt": "",
                 "asImage": false
             },
             "docs": {
-                "path": "",
+                "file": "",
                 "image": "",
                 "alt": "",
                 "asImage": false
@@ -42,7 +43,7 @@
             ],
             "credits": "",
             "specific": {
-                "path": "",
+                "file": "",
                 "image": "",
                 "alt": "",
                 "asImage": false
@@ -52,6 +53,14 @@
 
     let contents = () => {
         const c = project.content
+        c.presentation.file = genPathFromProject(project.name, c.presentation.file)
+        c.presentation.image = genLinkFromProject(project.name, c.presentation.image)
+        c.faq.file = genPathFromProject(project.name, c.faq.file)
+        c.faq.image = genLinkFromProject(project.name, c.faq.image)
+        c.docs.file = genPathFromProject(project.name, c.docs.file)
+        c.docs.image = genLinkFromProject(project.name, c.docs.image)
+        c.specific.file = genPathFromProject(project.name, c.specific.file)
+        c.specific.image = genLinkFromProject(project.name, c.specific.image)
         return [c.presentation, c.faq, c.docs, c.specific]
     }
 
@@ -66,7 +75,7 @@
 <Header bgColor="{bgColorAccent}"/>
 
 <CenteredHeroOverlayBtn title={project.name} description={project.description} {bgColor}
-                        image={project.image} btn="Discover more!" btnHref="#scrolled"/>
+                        image={genLinkFromProject(project.name, project.image)} btn="Discover more!" btnHref="#scrolled"/>
 
 <section class="mx-auto max-w-6xl mt-14" id="scrolled">
     <ParagraphImage contents={contents()} />

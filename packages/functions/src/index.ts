@@ -14,6 +14,14 @@ export function genSlug(str: string): string {
         .replace('ô', 'o')
 }
 
+export function genLinkFromProject(name: string, path: string): string {
+    return `/projects/${genSlug(name)}/${path}`
+}
+
+export function genPathFromProject(name: string, path: string): string {
+    return `projects.${genSlug(name)}.${path}`
+}
+
 export type Content = {
     file: string
     image: string
