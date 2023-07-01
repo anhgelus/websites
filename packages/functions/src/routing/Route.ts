@@ -25,7 +25,7 @@ export class Route {
 
     public getParams(location: string): Map<string, string> {
         const regex = this.genRegex()
-        const paramNames = this.getParamNames(location)
+        const paramNames = this.getParamNames()
         const params = new Map<string, string>()
         location.match(regex)?.forEach((param, i) => {
             if (i === paramNames.length+1) {
@@ -42,7 +42,7 @@ export class Route {
         return new RegExp(this.path.replace(this.parameters, "([a-zA-Z0-9-]+)").replace("/", "\/"))
     }
 
-    private getParamNames(location: string): string[] {
+    private getParamNames(): string[] {
         const paramNames: string[] = []
         this.path.match(this.parameters)?.forEach(param => {
             paramNames.push(param.replace("{", "").replace("}", ""))

@@ -6,6 +6,9 @@
     },
     "dev": {
       "outputs": []
-    }
+    },
+    "build": {
+      "outputs": []
+    },
   }
 }

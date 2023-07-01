@@ -1,0 +1,11 @@
+:80 {
+	root * /app
+
+	file_server
+
+	try_files {path} /index.html
+
+	log {
+	    output file /logs/access.log
+	 }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "@anhgelus/www",
+  "name": "@anhgelus/projects",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,9 +12,7 @@
     "@anhgelus/functions": "workspace:*",
     "@anhgelus/ui": "workspace:*",
     "sass": "^1.63.6",
-    "scss": "^0.2.4"
-  },
-  "devDependencies": {
+    "scss": "^0.2.4",
     "@tailwindcss/typography": "^0.5.8",
     "autoprefixer": "^10.4.2",
     "daisyui": "^2.6.0",

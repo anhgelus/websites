@@ -1,14 +1,14 @@
 export class ChangePageAnim {
     public readonly colors = ["bg-primary", "bg-secondary", "bg-neutral", "bg-success"]
 
-    private parent: HTMLDivElement;
+    private parent: HTMLDivElement|null = null;
 
     constructor(public readonly logo: string, public readonly showLogo = true, public readonly level = 3) {
         this.level = level;
         this.genDivs();
-        document.body.appendChild(this.parent);
+        document.body.appendChild(this.parent!);
         setTimeout(() => {
-            this.parent.remove();
+            this.parent!.remove();
         }, 2250);
     }
 

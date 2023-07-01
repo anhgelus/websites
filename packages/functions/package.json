@@ -5,7 +5,7 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {},
-  "devDependencies": {
+  "dependencies": {
     "@types/marked": "^5.0.0",
     "marked": "^5.1.0",
     "marked-mangle": "^1.1.0"
