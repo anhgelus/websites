@@ -20,6 +20,7 @@ export class Router {
                 }
                 link = link.parentElement!;
             }
+            link.classList.add("is-clicked");
             const href = link.href;
             if (href.startsWith("https") || href.startsWith("mailto:")) {
                 return
