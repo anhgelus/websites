@@ -88,7 +88,48 @@
       ],
       "credits": "This project was made by the anhgelus, with the help from SuperNoobYT and Xav.",
       "specific": {
-        "file": "projects.msmp.specific",
+        "file": "projects.biotechnica-challenge.specific",
+        "image": "",
+        "alt": "",
+        "asImage": false
+      }
+    }
+  },
+  {
+    "name": "license-generator",
+    "image": "/projects/license-generator/wallpaper.jpg",
+    "description": "CLI App helping to create licenses for your projects",
+    "content": {
+      "presentation": {
+        "file": "projects.license-generator.presentation",
+        "image": "",
+        "alt": "",
+        "asImage": false
+      },
+      "faq": {
+        "file": "projects.license-generator.faq",
+        "image": "",
+        "alt": "",
+        "asImage": false
+      },
+      "docs": {
+        "file": "projects.license-generator.docs",
+        "image": "",
+        "alt": "",
+        "asImage": false
+      },
+      "links": [
+        {
+          "name": "GitHub",
+          "href": "https://github.com/anhgelus/license-generator",
+          "primary": true,
+          "secondary": false,
+          "external": true
+        }
+      ],
+      "credits": "This project was made by the anhgelus, every contributors are listed on GitHub.",
+      "specific": {
+        "file": "projects.license-generator.specific",
         "image": "",
         "alt": "",
         "asImage": false
