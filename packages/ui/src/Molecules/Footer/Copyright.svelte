@@ -4,5 +4,5 @@
 </script>
 
 <div>
-    <p> {name} &copy; {year} - Contenu sous licence CC-BY-SA 4.0, code source sous licence AGPL</p>
+    <p> {name} &copy; {year} - Content under the license CC-BY-SA 4.0, source code under the license AGPL</p>
 </div>
