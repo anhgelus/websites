@@ -80,3 +80,15 @@ router.createAndAddRoute("404", () => {
 });
 
 router.route(window.location.pathname)
+
+document.querySelectorAll("meta").forEach(meta => {
+    const property = meta.getAttribute("property")
+    if (property === null) {
+        return
+    }
+    if (property === "og:url") {
+        meta.setAttribute("og:url", window.location.href)
+    } else if (property === "og:title") {
+        meta.setAttribute("og:title", document.title)
+    }
+});
