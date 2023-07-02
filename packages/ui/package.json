@@ -9,14 +9,7 @@
     "dev": "storybook dev -p 6006 --ci",
     "build-storybook": "storybook build"
   },
-  "devDependencies": {
-    "@storybook/addon-essentials": "^7.0.23",
-    "@storybook/addon-interactions": "^7.0.23",
-    "@storybook/addon-links": "^7.0.23",
-    "@storybook/blocks": "^7.0.23",
-    "@storybook/svelte": "^7.0.23",
-    "@storybook/svelte-vite": "^7.0.23",
-    "@storybook/testing-library": "^0.2.0",
+  "dependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.0",
     "@tsconfig/svelte": "^3.0.0",
     "react": "^18.2.0",
@@ -28,5 +21,14 @@
     "typescript": "^4.9.3",
     "vite": "^4.0.0",
     "@anhgelus/functions": "workspace:*"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.23",
+    "@storybook/addon-interactions": "^7.0.23",
+    "@storybook/addon-links": "^7.0.23",
+    "@storybook/blocks": "^7.0.23",
+    "@storybook/svelte": "^7.0.23",
+    "@storybook/svelte-vite": "^7.0.23",
+    "@storybook/testing-library": "^0.2.0"
   }
 }
