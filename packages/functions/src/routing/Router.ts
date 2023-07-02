@@ -22,7 +22,7 @@ export class Router {
             }
             link.classList.add("is-clicked");
             const href = link.href;
-            if (href.startsWith("https") || href.startsWith("mailto:")) {
+            if ((href.startsWith("https") && !href.startsWith(window.location.origin)) || href.startsWith("mailto:")) {
                 return
             }
             e.preventDefault();
