@@ -1,5 +1,5 @@
 <script>
-    import Title from '@anhgelus/ui/src/Atoms/Title/Title.svelte';
+    import Title from '../../Atoms/Title/Title.svelte';
     import {genSlug} from "@anhgelus/functions";
 
     export let image;

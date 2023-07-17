@@ -1,11 +1,16 @@
 import {marked} from "marked";
 // @ts-ignore
 import {mangle} from "marked-mangle";
+import {projectEvents} from "./listeners/project";
 
 marked.use(mangle(), {
     //@ts-ignore
     headerIds: false
 })
+
+export function setupProjectEvents() {
+    projectEvents()
+}
 
 export function genSlug(str: string): string {
     return str.toLowerCase()

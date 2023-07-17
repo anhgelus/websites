@@ -4,19 +4,18 @@ import {Router} from "@anhgelus/functions/src/routing/Router";
 import NotFound from "./pages/common/NotFound.svelte";
 import Projects from "./pages/Projects.svelte";
 import ProjectRender from "./pages/project/Project.svelte";
-import {events} from "./listeners/projectImage";
 
 import home from "../resources/pages/home.json";
 import rawProjects from "../resources/pages/projects.json";
-import {genSlug, Project} from "@anhgelus/functions";
+import {genSlug, Project, setupProjectEvents} from "@anhgelus/functions";
 
 const router = new Router()
 // @ts-ignore
 const projects: Project[] = rawProjects
 
-export const app = document.querySelector("#app")!;
-export const bgColor = 'bg-base-100';
-export const bgColorAccent = 'bg-base-200';
+const app = document.querySelector("#app")!;
+const bgColor = 'bg-base-100';
+const bgColorAccent = 'bg-base-200';
 
 function newTitle(base: string): string {
     return base + " - anhgelus World Projects"
@@ -46,7 +45,7 @@ router.createAndAddRoute("/projects", () => {
     });
 }, () => {
     if (!router.hasQueries()) {
-        events();
+        setupProjectEvents();
     }
 });
 
@@ -66,10 +65,6 @@ router.createAndAddRoute("/projects/{slug}", (data) => {
             project: project,
         }
     });
-}, () => {
-    if (!router.hasQueries()) {
-        events();
-    }
 });
 
 router.createAndAddRoute("404", () => {

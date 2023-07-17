@@ -1,7 +1,7 @@
 <script>
     import NavbarLink from "../../Atoms/Navbar/NavbarLink.svelte";
 
-    export let bgColor = '';
+    // export let bgColor = '';
     export let links = [
         {
             name: 'Home',

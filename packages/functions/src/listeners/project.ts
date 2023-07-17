@@ -1,4 +1,4 @@
-export function events() {
+export function projectEvents() {
     document.querySelectorAll(".project-image").forEach((e) => {
         setupEvents(e)
     })
