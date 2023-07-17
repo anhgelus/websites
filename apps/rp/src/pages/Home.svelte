@@ -20,11 +20,11 @@
 <Header bgColor="{bgColorAccent}"/>
 
 <CenteredHeroOverlayBtn title="AW RP" description="Le monde du RP" {bgColor}
-                        image="/home-wallpaper.jpg" btn="What?" btnHref="#scrolled"/>
+                        image="/home-wallpaper.jpg" btn="Quoi ?" btnHref="#scrolled"/>
 <section class="mx-auto max-w-6xl mt-14" id="scrolled">
     <ParagraphImage {contents} />
 </section>
 
-<ButtonEndPage name="Discover my projects" href="/projects" />
+<ButtonEndPage name="Découvrez les RP" href="/projects" />
 
 <Footer bgColor="{bgColorAccent}"/>
