@@ -9,4 +9,13 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - ./logs:/logs
+      - ./logs/projects:/logs
+  rp:
+    build:
+      context: .
+      args:
+        APP: rp
+    ports:
+      - "8000:80"
+    volumes:
+      - ./logs/rp:/logs
