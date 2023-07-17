@@ -3,6 +3,7 @@
     import {genSlug} from "@anhgelus/functions";
 
     export let image;
+    export let route = "projects";
     export let projectName;
     export let right = false;
     let clazz = () => {
@@ -14,7 +15,7 @@
     }
 </script>
 
-<a href="/projects/{genSlug(projectName)}">
+<a href="/{route}/{genSlug(projectName)}">
     <div class=" h-full w-full flex items-center relative lg:min-h-66 min-h-80 max-w-full project-image">
         <div class="absolute w-full h-full brightness-50 z-0 bg clickable" style="background: fixed center/cover url({image})"></div>
         <div class="text-accent-content relative z-10 uppercase clickable {clazz()}">

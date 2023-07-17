@@ -2,11 +2,15 @@ import './app.scss';
 import Home from "./pages/Home.svelte";
 import {Router} from "@anhgelus/functions/src/routing/Router";
 import NotFound from "./pages/common/NotFound.svelte";
+import Projects from "./pages/RPs.svelte";
 // import {events} from "./listeners/projectImage";
 
 // import {genSlug, Project} from "@anhgelus/functions";
 
 import home from "../resources/pages/home.json";
+import rps from "../resources/pages/rps.json";
+import {genSlug} from "@anhgelus/functions";
+import RP from "./pages/rp/RP.svelte";
 
 const router = new Router()
 
@@ -26,6 +30,37 @@ router.createAndAddRoute("/", () => {
             bgColor: bgColor,
             bgColorAccent: bgColorAccent,
             contents: home,
+        }
+    });
+});
+
+router.createAndAddRoute("/rp", () => {
+    document.title = newTitle("RP")
+    new Projects({
+        target: app,
+        props: {
+            bgColor: bgColor,
+            bgColorAccent: bgColorAccent,
+            projects: rps,
+        }
+    });
+});
+
+router.createAndAddRoute("/rp/{slug}", (data) => {
+    let slug = data.params.get("slug")!;
+    let project = rps.find(p => genSlug(p.name) === slug);
+    if (project === undefined) {
+        router.notFound();
+        return;
+    }
+    document.title = newTitle(`${project.name} - RP`)
+    new RP({
+        target: app,
+        props: {
+            bgColor: bgColor,
+            bgColorAccent: bgColorAccent,
+            project: project,
+            routeData: data
         }
     });
 });

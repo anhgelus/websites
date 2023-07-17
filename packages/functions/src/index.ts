@@ -17,6 +17,8 @@ export function genSlug(str: string): string {
         .replace(" ", "-")
         .replace('é', 'e')
         .replace('ô', 'o')
+        .replace('\'', '-')
+        .replace('?', '')
 }
 
 export function genLinkFromProject(name: string, path: string): string {

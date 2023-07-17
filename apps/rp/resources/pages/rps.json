@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Et si c'était un jour parmi tant d'autre ?",
+    "image": "wallpaper.jpg",
+    "description": "Un RP dans un monde post-apocalyptique zombie sur Minecraft",
+    "content": {
+      "presentation": "presentation",
+      "story": "story",
+      "content": "content",
+      "rules": "rules"
+    },
+    "links": [
+      {
+        "name": "Vidéo de présentation",
+        "href": "",
+        "primary": false,
+        "secondary": false,
+        "external": true
+      },
+      {
+        "name": "Playlist",
+        "href": "",
+        "primary": true,
+        "secondary": false,
+        "external": true
+      }
+    ],
+    "credits": "This project was made by the anhgelus World team, every contributor is credited on GitHub."
+  }
+]

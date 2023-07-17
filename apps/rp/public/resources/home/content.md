@@ -5,3 +5,4 @@ Vous trouverez les informations suivantes à propos de un RP en particulier :
 - La présentation
 - L'histoire
 - Le contenus
+- Les règles spécifiques au RP
