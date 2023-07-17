@@ -14,19 +14,19 @@ export function setupProjectEvents() {
 
 export function genSlug(str: string): string {
     return str.toLowerCase()
-        .replace(" ", "-")
-        .replace('é', 'e')
-        .replace('ô', 'o')
-        .replace('\'', '-')
-        .replace('?', '')
+        .replace(/ /g, "-")
+        .replace(/é/g, 'e')
+        .replace(/ô/g, 'o')
+        .replace(/'/g, '-')
+        .replace(/\?/g, '')
 }
 
 export function genLinkFromProject(name: string, path: string): string {
-    return `/projects/${genSlug(name)}/${path}`
+    return `/projects/${genSlug(name)}/${genSlug(path)}`
 }
 
 export function genPathFromProject(name: string, path: string): string {
-    return `projects.${genSlug(name)}.${path}`
+    return `projects.${genSlug(name)}.${genSlug(path)}`
 }
 
 export type Content = {

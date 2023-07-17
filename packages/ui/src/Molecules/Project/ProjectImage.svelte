@@ -13,6 +13,7 @@
         }
         return `2xl:mr-3/10 lg:mr-64 md:mr-12 md:ml-auto md:text-right ${global}`
     }
+    console.log(genSlug(projectName))
 </script>
 
 <a href="/{route}/{genSlug(projectName)}">
