@@ -23,7 +23,7 @@ function newTitle(base: string): string {
 }
 
 router.createAndAddRoute("/", () => {
-    document.title = newTitle("Accueil")
+    document.title = newTitle("Home")
     new Home({
         target: app,
         props: {
@@ -35,7 +35,7 @@ router.createAndAddRoute("/", () => {
 });
 
 router.createAndAddRoute("/projects", () => {
-    document.title = newTitle("Projets")
+    document.title = newTitle("Projects")
     new Projects({
         target: app,
         props: {
@@ -57,7 +57,7 @@ router.createAndAddRoute("/projects/{slug}", (data) => {
         router.notFound();
         return;
     }
-    document.title = newTitle(`${project.name} - Projets`)
+    document.title = newTitle(`${project.name} - Projects`)
     new ProjectRender({
         target: app,
         props: {
@@ -79,16 +79,4 @@ router.createAndAddRoute("404", () => {
     });
 });
 
-router.route(window.location.pathname)
-
-document.querySelectorAll("meta").forEach(meta => {
-    const property = meta.getAttribute("property")
-    if (property === null) {
-        return
-    }
-    if (property === "og:url") {
-        meta.setAttribute("og:url", window.location.href)
-    } else if (property === "og:title") {
-        meta.setAttribute("og:title", document.title)
-    }
-});
+router.automaticRouting();

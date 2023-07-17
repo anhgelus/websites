@@ -11,7 +11,8 @@
         {
             file: "home.presentation",
             image: "https://placekitten.com/1920/1080",
-            alt: "Image"
+            alt: "Image",
+            asImage: true
         }
     ]
 </script>

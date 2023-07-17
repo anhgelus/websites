@@ -108,6 +108,22 @@ export class Router {
         route.exec(data);
     }
 
+    public automaticRouting(): void {
+        this.route(window.location.pathname)
+
+        document.querySelectorAll("meta").forEach(meta => {
+            const property = meta.getAttribute("property")
+            if (property === null) {
+                return
+            }
+            if (property === "og:url") {
+                meta.setAttribute("og:url", window.location.href)
+            } else if (property === "og:title") {
+                meta.setAttribute("og:title", document.title)
+            }
+        });
+    }
+
     /**
      * Get all queries.
      */

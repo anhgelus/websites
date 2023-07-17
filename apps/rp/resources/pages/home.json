@@ -1,0 +1,14 @@
+[
+  {
+    "file": "home.presentation",
+    "image": "/logo-low.jpg",
+    "alt": "",
+    "asImage": true
+  },
+  {
+    "file": "home.content",
+    "image": "",
+    "alt": "",
+    "asImage": true
+  }
+]

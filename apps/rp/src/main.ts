@@ -2,9 +2,11 @@ import './app.scss';
 import Home from "./pages/Home.svelte";
 import {Router} from "@anhgelus/functions/src/routing/Router";
 import NotFound from "./pages/common/NotFound.svelte";
-import {events} from "./listeners/projectImage";
+// import {events} from "./listeners/projectImage";
 
-import {genSlug, Project} from "@anhgelus/functions";
+// import {genSlug, Project} from "@anhgelus/functions";
+
+import home from "../resources/pages/home.json";
 
 const router = new Router()
 
@@ -35,17 +37,5 @@ router.createAndAddRoute("404", () => {
     });
 });
 
-router.route(window.location.pathname)
-
-document.querySelectorAll("meta").forEach(meta => {
-    const property = meta.getAttribute("property")
-    if (property === null) {
-        return
-    }
-    if (property === "og:url") {
-        meta.setAttribute("og:url", window.location.href)
-    } else if (property === "og:title") {
-        meta.setAttribute("og:title", document.title)
-    }
-});
+router.automaticRouting();
 

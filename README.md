@@ -5,6 +5,7 @@ Mono repo of all anhgelus World websites
 ## Websites
 
 - [anhgelus World Projects](https://projects.anhgelus.world) folder `apps/projects`
+- [anhgelus World RP](https://rp.anhgelus.world) folder `apps/rp`
 
 ## Technologies
 
