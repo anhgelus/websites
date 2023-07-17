@@ -1,0 +1,63 @@
+@import 'tailwind.css';
+
+$duration : 2.25;
+$transistion-std: .5s;
+$fast-transistion-std: .3s;
+
+#navbar {
+  &.op-dis .navbar {
+    background: none;
+    transition: $fast-transistion-std;
+  }
+  & .navbar {
+    transition: $fast-transistion-std;
+  }
+}
+
+.min-h-75 {
+  min-height: 75vh;
+}
+
+.animation {
+  animation-name: anim;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+  @for $i from 0 through 5 {
+    $d: calc($duration - (4*($i/10)));
+    &.delay-#{$i} {
+      animation-delay: #{calc(2 * $i / 10)}s;
+      animation-duration: #{$d}s;
+    }
+  }
+}
+
+@keyframes anim {
+  0% {
+    opacity: 1;
+    top: -100vh;
+  }
+  47% {
+    top: 0;
+  }
+  53% {
+    top: 0;
+  }
+  100% {
+    top: 100vh;
+    opacity: 1;
+  }
+}
+
+.project-image {
+  & div { transition: $transistion-std; letter-spacing: 0.1rem; }
+  & .bg { transition: $transistion-std; }
+  &.is-active {
+    & .bg { filter: brightness(0); }
+    & div {
+      @media (min-width: 1536px) {
+        letter-spacing: 0.75rem;
+      }
+      letter-spacing: 0.25rem;
+    }
+  }
+}
