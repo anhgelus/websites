@@ -25,6 +25,6 @@
     <ParagraphImage {contents} />
 </section>
 
-<ButtonEndPage name="Découvrez les RP" href="/projects" />
+<ButtonEndPage name="Découvrez les RP" href="/rp" />
 
 <Footer bgColor="{bgColorAccent}"/>

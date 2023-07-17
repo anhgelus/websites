@@ -3,11 +3,10 @@
     import Footer from "../common/Footer.svelte";
     import CenteredHeroOverlayBtn from "@anhgelus/ui/src/Molecules/Hero/CenteredHeroOverlayBtn.svelte";
     import ParagraphImage from "@anhgelus/ui/src/Organisms/Contents/ParagraphImage.svelte";
-    import Links from "@anhgelus/ui/src/Organisms/Contents/Links.svelte";
     import ButtonEndPage from "@anhgelus/ui/src/Atoms/Button/ButtonEndPage.svelte";
+    import Link from "@anhgelus/ui/src/Atoms/Link/Link.svelte";
     import Prose from "@anhgelus/ui/src/Atoms/Contents/Prose.svelte";
     import {genLinkFromProject, genPathFromProject} from "@anhgelus/functions";
-    import {Router} from "@anhgelus/functions/src/routing/Router.js";
 
     export let bgColorAccent, bgColor;
     export let routeData = {
@@ -56,7 +55,7 @@
     let getContent = async () => {
         const tab = routeData.params.get("tab")
         let path
-        let content: [{
+        let content = [{
             "file": "",
             "image": "",
             "alt": "",
@@ -89,6 +88,16 @@
         })
         return content
     }
+
+    let tabClazz = (tab) => {
+        const query = routeData.params.get("tab")
+        if ((query === undefined || query === "presentation") && tab === "presentation") {
+            return "tab tab-lifted tab-active";
+        } else if (tab !== query) {
+            return "tab tab-lifted"
+        }
+        return "tab tab-active tab-lifted";
+    }
 </script>
 
 <Header bgColor="{bgColorAccent}"/>
@@ -97,7 +106,12 @@
                         image={genLinkFromProject(project.name, project.image)} btn="Découvrez en plus!" btnHref="#scrolled"/>
 
 <section class="mx-auto max-w-6xl mt-14" id="scrolled">
-    <!-- TODO: navbar -->
+    <div class="tabs">
+        <Link content="Présentation" href="?tab=presentation" customClass={tabClazz("presentation")} />
+        <Link content="Histoire" href="?tab=story" customClass={tabClazz("story")} />
+        <Link content="Contenus" href="?tab=content" customClass={tabClazz("content")} />
+        <Link content="Règles" href="?tab=rules" customClass={tabClazz("rules")} />
+    </div>
     <ParagraphImage contents={getContent()} />
     <div class="my-16 mx-8 xl:mx-0">
         <Prose data={data()} />

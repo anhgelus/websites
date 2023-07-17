@@ -19,6 +19,10 @@
         {
             name: "Accueil",
             href: "/",
+        },
+        {
+            name: "RP",
+            href: "/rp",
         }
 	]
 </script>
