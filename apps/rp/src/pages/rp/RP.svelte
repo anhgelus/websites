@@ -109,7 +109,7 @@
                         image={genLinkFromProject(project.name, project.image)} btn="Découvrez en plus!" btnHref="#scrolled"/>
 
 <section class="mx-auto max-w-6xl mt-14" id="scrolled">
-    <div class="tabs mx-auto justify-center">
+    <div class="tabs mx-auto justify-center" id="tab">
         <a href="?tab=presentation" class={tabClazz("presentation")}>Présentation</a>
         <a href="?tab=story" class={tabClazz("story")}>Histoire</a>
         <a href="?tab=content" class={tabClazz("content")}>Contenus</a>
@@ -130,6 +130,6 @@
     </div>
 </section>
 
-<ButtonEndPage name="Découvrez mes autres RPs" href="/projects" />
+<ButtonEndPage name="Retourner en haut" href="#tab" />
 
 <Footer bgColor="{bgColorAccent}" noSpace="true"/>
