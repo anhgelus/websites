@@ -20,7 +20,7 @@ export function genSlug(str: string): string {
         .replace(/ê/g, 'e')
         .replace(/à/g, 'a')
         .replace(/ô/g, 'o')
-        .replace(/[^a-z-]+/g, '-')
+        .replace(/[^a-z-/]+/g, '-')
         .replace(/\?/g, '')
     while (str.endsWith("-")) {
         str = str.substring(0, str.length - 1)
