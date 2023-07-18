@@ -13,12 +13,19 @@ export function setupProjectEvents() {
 }
 
 export function genSlug(str: string): string {
-    return str.toLowerCase()
+    str = str.toLowerCase()
         .replace(/ /g, "-")
         .replace(/é/g, 'e')
+        .replace(/è/g, 'e')
+        .replace(/ê/g, 'e')
+        .replace(/à/g, 'a')
         .replace(/ô/g, 'o')
-        .replace(/'/g, '-')
+        .replace(/[^a-z-]+/g, '-')
         .replace(/\?/g, '')
+    while (str.endsWith("-")) {
+        str = str.substring(0, str.length - 1)
+    }
+    return str
 }
 
 export function genLinkFromProject(name: string, path: string): string {
