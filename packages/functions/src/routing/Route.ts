@@ -53,4 +53,11 @@ export class Route {
 
 export class RouteData {
     constructor(public readonly router: Router, public readonly params: Map<string, string>) {}
+
+    public getQuery(id: string): string|undefined {
+        const params = new URLSearchParams(window.location.search);
+        const val = params.get(id)
+        if (val === null) return undefined
+        return val
+    }
 }

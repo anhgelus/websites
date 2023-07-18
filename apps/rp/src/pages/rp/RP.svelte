@@ -13,7 +13,8 @@
         router: {
             route: (path) => {}
         },
-        params: new Map().set("hello", "world")
+        params: new Map().set("hello", "world"),
+        getQuery: (id) => {}
     };
     export let project = {
         "name": "",
@@ -36,13 +37,13 @@
         ],
         "credits": "",
     }
-
     let contents = () => {
         const c = project.content
         c.presentation = genLinkFromProject(project.name, c.presentation)
         c.story = genLinkFromProject(project.name, c.story)
         c.content = genLinkFromProject(project.name, c.content)
         c.rules =  genLinkFromProject(project.name, c.rules)
+        console.log(c)
         return [c.presentation, c.story, c.content, c.rules]
     }
 
@@ -53,7 +54,7 @@
     }
     
     let getContent = async () => {
-        const tab = routeData.params.get("tab")
+        const tab = routeData.getQuery("tab")
         let path
         let content = [{
             "file": "",
@@ -62,7 +63,8 @@
             "asImage": true
         }]
         switch (tab) {
-            case undefined || "presentation":
+            case "presentation":
+            case undefined:
                 path = contents()[0];
                 break;
             case "story":
@@ -77,7 +79,7 @@
             default:
                 path = undefined
         }
-        if (tab === undefined) {
+        if (path === undefined) {
             routeData.router.route("404")
             return
         }
@@ -90,7 +92,7 @@
     }
 
     let tabClazz = (tab) => {
-        const query = routeData.params.get("tab")
+        const query = routeData.getQuery("tab")
         if ((query === undefined || query === "presentation") && tab === "presentation") {
             return "tab tab-lifted tab-active";
         } else if (tab !== query) {
