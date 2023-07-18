@@ -1,0 +1,20 @@
+[
+  {
+    "file": "rules.presentation",
+    "image": "/logo-low.jpg",
+    "alt": "",
+    "asImage": true
+  },
+  {
+    "file": "rules.rp",
+    "image": "",
+    "alt": "",
+    "asImage": true
+  },
+  {
+    "file": "rules.gameplay",
+    "image": "",
+    "alt": "",
+    "asImage": true
+  }
+]

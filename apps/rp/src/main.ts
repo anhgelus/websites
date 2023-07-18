@@ -5,8 +5,10 @@ import NotFound from "./pages/common/NotFound.svelte";
 import Projects from "./pages/RPs.svelte";
 import home from "../resources/pages/home.json";
 import rps from "../resources/pages/rps.json";
+import rules from "../resources/pages/rules.json";
 import {genSlug, setupProjectEvents} from "@anhgelus/functions";
 import RP from "./pages/rp/RP.svelte";
+import Rules from "./pages/Rules.svelte";
 
 const router = new Router()
 
@@ -61,6 +63,18 @@ router.createAndAddRoute("/rp/{slug}", (data) => {
             bgColorAccent: bgColorAccent,
             project: project,
             routeData: data
+        }
+    });
+});
+
+router.createAndAddRoute("/rules", () => {
+    document.title = newTitle(`Règles`)
+    new Rules({
+        target: app,
+        props: {
+            bgColor: bgColor,
+            bgColorAccent: bgColorAccent,
+            contents: rules,
         }
     });
 });

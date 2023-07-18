@@ -6,7 +6,7 @@
         {
             file: "",
             image: "",
-            alt: "Image",
+            alt: "",
             asImage: true
         }
     ]

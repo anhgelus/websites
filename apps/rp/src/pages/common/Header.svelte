@@ -23,6 +23,10 @@
         {
             name: "RP",
             href: "/rp",
+        },
+        {
+            name: "Règles",
+            href: "/rules",
         }
 	]
 </script>
