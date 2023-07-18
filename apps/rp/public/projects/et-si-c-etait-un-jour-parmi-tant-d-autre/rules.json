@@ -1,8 +1,14 @@
 [
   {
-    "file": "",
+    "file": "rules.base",
     "image": "",
     "alt": "",
-    "asImage": true
+    "asImage": false
+  },
+  {
+    "file": "rules.starting",
+    "image": "",
+    "alt": "",
+    "asImage": false
   }
 ]
