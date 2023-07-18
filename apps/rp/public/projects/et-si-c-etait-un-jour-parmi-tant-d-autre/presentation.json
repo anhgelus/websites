@@ -1,6 +1,18 @@
 [
   {
-    "file": "",
+    "file": "presentation.part1",
+    "image": "",
+    "alt": "",
+    "asImage": true
+  },
+  {
+    "file": "presentation.part2",
+    "image": "",
+    "alt": "",
+    "asImage": true
+  },
+  {
+    "file": "presentation.part3",
     "image": "",
     "alt": "",
     "asImage": true

@@ -1,0 +1,2 @@
+_Et si c'était un jour parmi tant d'autre ?_ (abrévié _Un jour_) est un événement RP qui se déroule sur Minecraft durant
+le mois de juillet et août 2023. Cet événement est privé et il s'est déroulé sur le serveur privé de @anhgelus.

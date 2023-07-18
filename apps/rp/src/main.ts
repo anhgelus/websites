@@ -3,13 +3,9 @@ import Home from "./pages/Home.svelte";
 import {Router} from "@anhgelus/functions/src/routing/Router";
 import NotFound from "./pages/common/NotFound.svelte";
 import Projects from "./pages/RPs.svelte";
-// import {events} from "./listeners/projectImage";
-
-// import {genSlug, Project} from "@anhgelus/functions";
-
 import home from "../resources/pages/home.json";
 import rps from "../resources/pages/rps.json";
-import {genSlug} from "@anhgelus/functions";
+import {genSlug, setupProjectEvents} from "@anhgelus/functions";
 import RP from "./pages/rp/RP.svelte";
 
 const router = new Router()
@@ -44,6 +40,10 @@ router.createAndAddRoute("/rp", () => {
             projects: rps,
         }
     });
+}, () => {
+    if (!router.hasQueries()) {
+        setupProjectEvents();
+    }
 });
 
 router.createAndAddRoute("/rp/{slug}", (data) => {
