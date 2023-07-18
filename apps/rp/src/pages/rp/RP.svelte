@@ -50,8 +50,10 @@
     let links = () => project.content.links
 
     let data = () => {
-        return `<h2>Credits</h2><p>${project.content.credits}</p>`
+        return `<h2>Credits</h2><p>${project.credits}</p>`
     }
+
+    let cnt;
     
     let getContent = async () => {
         const tab = routeData.getQuery("tab")
@@ -88,6 +90,7 @@
             c.file = genPathFromProject(project.name, c.file)
             c.image = genLinkFromProject(project.name, c.image)
         })
+        cnt = content
         return content
     }
 
@@ -109,12 +112,14 @@
 
 <section class="mx-auto max-w-6xl mt-14" id="scrolled">
     <div class="tabs">
-        <Link content="Présentation" href="?tab=presentation" customClass={tabClazz("presentation")} />
-        <Link content="Histoire" href="?tab=story" customClass={tabClazz("story")} />
-        <Link content="Contenus" href="?tab=content" customClass={tabClazz("content")} />
-        <Link content="Règles" href="?tab=rules" customClass={tabClazz("rules")} />
+        <a href="?tab=presentation" class={tabClazz("presentation")}>Présentation</a>
+        <a href="?tab=story" class={tabClazz("story")}>Histoire</a>
+        <a href="?tab=content" class={tabClazz("content")}>Contenus</a>
+        <a href="?tab=rules" class={tabClazz("rules")}>Règles</a>
     </div>
-    <ParagraphImage contents={getContent()} />
+    {#await getContent()}
+        <ParagraphImage contents={cnt} />
+    {/await}
     <div class="my-16 mx-8 xl:mx-0">
         <Prose data={data()} />
     </div>
