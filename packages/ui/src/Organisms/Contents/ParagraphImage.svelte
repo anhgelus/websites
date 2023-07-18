@@ -10,9 +10,6 @@
             asImage: true
         }
     ]
-    contents.forEach((e) => {
-        console.log(e)
-    })
 </script>
 
 {#each contents as c, i}

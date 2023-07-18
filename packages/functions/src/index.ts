@@ -33,7 +33,7 @@ export function genLinkFromProject(name: string, path: string): string {
 }
 
 export function genPathFromProject(name: string, path: string): string {
-    return `projects.${genSlug(name)}.${genSlug(path)}`
+    return `projects.${genSlug(name)}.${path}`
 }
 
 export type Content = {

@@ -4,7 +4,7 @@
     import CenteredHeroOverlayBtn from "@anhgelus/ui/src/Molecules/Hero/CenteredHeroOverlayBtn.svelte";
     import ParagraphImage from "@anhgelus/ui/src/Organisms/Contents/ParagraphImage.svelte";
     import ButtonEndPage from "@anhgelus/ui/src/Atoms/Button/ButtonEndPage.svelte";
-    import Link from "@anhgelus/ui/src/Atoms/Link/Link.svelte";
+    import Button from "@anhgelus/ui/src/Atoms/Button/Button.svelte";
     import Prose from "@anhgelus/ui/src/Atoms/Contents/Prose.svelte";
     import {genLinkFromProject, genPathFromProject} from "@anhgelus/functions";
 
@@ -53,8 +53,6 @@
     let data = () => {
         return `<h2>Credits</h2><p>${project.credits}</p>`
     }
-
-    let cnt;
     
     let getContent = async () => {
         const tab = routeData.getQuery("tab")
@@ -91,7 +89,6 @@
             c.file = genPathFromProject(project.name, c.file)
             c.image = genLinkFromProject(project.name, c.image)
         })
-        cnt = content
         return content
     }
 
@@ -119,7 +116,14 @@
         <a href="?tab=rules" class={tabClazz("rules")}>Règles</a>
     </div>
     {#await getContent()}
-        <ParagraphImage contents={cnt} />
+        <Button isDisabled=true name="Loading" customClass="loading-spinner loading loading-md" />
+    {:then data}
+        <ParagraphImage contents={data} />
+    {:catch error}
+        <div class="alert alert-error">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span>Error! {error.response.status}</span>
+        </div>
     {/await}
     <div class="my-16 mx-8 xl:mx-0">
         <Prose data={data()} />
