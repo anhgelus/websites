@@ -10,7 +10,8 @@ export class Router {
 
     constructor() {
         document.addEventListener("click", (e) => {
-            if (!(e.target instanceof HTMLAnchorElement) && (e.target instanceof HTMLElement && !e.target.classList.contains("clickable"))) {
+            if (!(e.target instanceof HTMLAnchorElement) &&
+                (e.target instanceof HTMLElement && !e.target.classList.contains("clickable") && !e.target.classList.contains("no-load"))) {
                 return
             }
             let link: HTMLElement = <HTMLElement>e.target;
@@ -40,15 +41,18 @@ export class Router {
                 window.history.pushState({}, "", href);
                 return
             }
-            this.changePage(href);
+            this.changePage(href, !link.classList.contains("no-load"));
         })
     }
 
-    private changePage(href: string) {
+    private changePage(href: string, anim: boolean) {
         this.queries = new Map<string,string>();
-
+        if (!anim) {
+            window.history.pushState({}, "", href);
+            this.route(href)
+            return
+        }
         new ChangePageAnim("/logo.jpg", false)
-
         setTimeout(() => {
             window.scrollTo({
                 top: 0,

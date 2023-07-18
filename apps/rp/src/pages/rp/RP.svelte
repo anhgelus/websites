@@ -37,13 +37,14 @@
         ],
         "credits": "",
     }
+
     let contents = () => {
         const c = project.content
+        if (c.presentation.startsWith("/projects")) return [c.presentation, c.story, c.content, c.rules]
         c.presentation = genLinkFromProject(project.name, c.presentation)
         c.story = genLinkFromProject(project.name, c.story)
         c.content = genLinkFromProject(project.name, c.content)
         c.rules =  genLinkFromProject(project.name, c.rules)
-        console.log(c)
         return [c.presentation, c.story, c.content, c.rules]
     }
 
@@ -97,11 +98,11 @@
     let tabClazz = (tab) => {
         const query = routeData.getQuery("tab")
         if ((query === undefined || query === "presentation") && tab === "presentation") {
-            return "tab tab-lifted tab-active";
+            return "tab tab-bordered tab-active no-load";
         } else if (tab !== query) {
-            return "tab tab-lifted"
+            return "tab tab-bordered no-load"
         }
-        return "tab tab-active tab-lifted";
+        return "tab tab-active tab-bordered no-load";
     }
 </script>
 
@@ -111,7 +112,7 @@
                         image={genLinkFromProject(project.name, project.image)} btn="Découvrez en plus!" btnHref="#scrolled"/>
 
 <section class="mx-auto max-w-6xl mt-14" id="scrolled">
-    <div class="tabs">
+    <div class="tabs mx-auto justify-center">
         <a href="?tab=presentation" class={tabClazz("presentation")}>Présentation</a>
         <a href="?tab=story" class={tabClazz("story")}>Histoire</a>
         <a href="?tab=content" class={tabClazz("content")}>Contenus</a>

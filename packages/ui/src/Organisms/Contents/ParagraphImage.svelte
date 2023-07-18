@@ -4,8 +4,8 @@
 
     export let contents = [
         {
-            file: "home.presentation",
-            image: "https://placekitten.com/1920/1080",
+            file: "",
+            image: "",
             alt: "Image",
             asImage: true
         }
