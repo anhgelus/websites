@@ -35,7 +35,7 @@ Raphaël VALQUE, homme de 23 ans, homosexuel.
     - Craintif
     - [caché]
 
-[Skin Minecraft]()
+[Skin Minecraft](/projects/et-si-c-etait-un-jour-parmi-tant-d-autre/raphael_valque-skin.png)
 
 Histoire :
 > *dernière page d'une sorte de journal intime*
