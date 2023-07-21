@@ -1,14 +1,10 @@
 ## Presentation
 
-The goal of this modpack is to recreate DayZ in Minecraft but, what is DayZ ? The gameplay takes place during a zombie apocalypse,
-and you move through destroyed cities. It's like The Last Of Us in multiplayer.
+The entire world was infected by an unknown disease. This disease is turning infected humans into zombies.
 
-In this world, you can use gun, baseball bat and more to kill zombies or other players. You can also create a fortified
-base with traps.
+You are one of humanity's last survivant.
 
-If you want to have a better experience, you can make a story around this world or you can make your own goal.
+You can craft guns, ammunitions, find food, resources and you know how to survive in this dangerous world.
 
-## Improve your experience
+Travels accross a living abandonned world, fight against hostile players and create a factory to get new weapons.
 
-If you want to improve your experience, you can install OptiFine.
-We cannot put it inside the modpack because this not authorized by the license.
