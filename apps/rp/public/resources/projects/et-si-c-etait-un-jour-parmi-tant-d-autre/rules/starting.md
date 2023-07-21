@@ -38,6 +38,19 @@ Raphaël VALQUE, homme de 23 ans, homosexuel.
 [Skin Minecraft]()
 
 Histoire :
-> Hello, je suis l'histoire
+> *dernière page d'une sorte de journal intime*
+> **Jour 354**, découverte d'une autre ville
+> Toujours à la recherche de ce tueur.
+> 9 h - nouveauté (*encore*) : découverte d'une autre ville, semble assez détruite (comme les autre), pas de signe de vie visible, trace de zombies à la zone que je pourrais appeler entrée
+> 10 h 30 - update : beaucoup d'infectés, cette ville n'a pas du être désinfectée par l'armée après la catastrophe
+> 11 h - update : cette ville semble être habitée, trace de vivres consommables et d'impacts sur les murs
+> 11 h 30 - notes : ville dangereuse, pas le temps de détaillé
+> 13 h - update notes : bâtiments instables à cause des pluies acides, zombies se trouvent dans les sous-sols, grandes villes avec beaucoup de grands buildings, semble non habité durant de nombreuses années après la catastrophe, présence humaine d'une hostilité inconnue
+> 15 h - notes : je viens d'échapper à une horde de zombies présente dehors, ville vraiment dangereuse, faut que je me casse
+> 17 h - notes : ville vraiment immense, impossible de s'échapper, va falloir y passer la nuit
+> 17 h 15 ? - update notes : j'ai oublié de notifier que les buildings cachent tout le temps la vu, l'orientation y est très complexe
+> 19 h - notes : la nuit se rapproche à grand pas, toujours pas d'abris pour la nuit
+> ? h - notes : abris trouvé, vraiment à chier, aucune idée de l'heure, faut que je dorme
+> **Fin jour 354**
 
 Objectifs : [cachés]
