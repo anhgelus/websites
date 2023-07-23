@@ -109,7 +109,7 @@
                         image={genLinkFromProject(project.name, project.image)} btn="Découvrez en plus!" btnHref="#scrolled"/>
 
 <section class="mx-auto max-w-6xl mt-14" id="scrolled">
-    <div class="tabs mx-auto justify-center" id="tab">
+    <div class="tabs mx-auto justify-center mb-8" id="tab">
         <a href="?tab=presentation" class={tabClazz("presentation")}>Présentation</a>
         <a href="?tab=story" class={tabClazz("story")}>Histoire</a>
         <a href="?tab=content" class={tabClazz("content")}>Contenus</a>
