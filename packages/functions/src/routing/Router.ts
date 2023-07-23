@@ -23,7 +23,10 @@ export class Router {
             }
             link.classList.add("is-clicked");
             const href = link.href;
-            if ((href.startsWith("https") && !href.startsWith(window.location.origin)) || href.startsWith("mailto:")) {
+            const fileRegex = /(.*)(\.[a-z]+$)/;
+            if ((href.startsWith("https") && !href.startsWith(window.location.origin)) ||
+                href.startsWith("mailto:") ||
+                fileRegex.test(href)) {
                 return
             }
             e.preventDefault();
