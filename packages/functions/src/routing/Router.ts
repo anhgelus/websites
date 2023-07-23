@@ -110,10 +110,6 @@ export class Router {
         const data = new RouteData(this, route.getParams(path));
         route.fn(data);
         route.exec(data);
-    }
-
-    public automaticRouting(): void {
-        this.route(window.location.pathname)
 
         document.querySelectorAll("meta").forEach(meta => {
             const property = meta.getAttribute("property")
@@ -126,6 +122,10 @@ export class Router {
                 meta.setAttribute("og:title", document.title)
             }
         });
+    }
+
+    public automaticRouting(): void {
+        this.route(window.location.pathname)
     }
 
     /**
