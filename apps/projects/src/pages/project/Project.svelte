@@ -53,6 +53,7 @@
 
     let contents = () => {
         const c = project.content
+        if (c.presentation.file.startsWith("projects")) return [c.presentation, c.faq, c.docs, c.specific]
         c.presentation.file = genPathFromProject(project.name, c.presentation.file)
         c.presentation.image = genLinkFromProject(project.name, c.presentation.image)
         c.faq.file = genPathFromProject(project.name, c.faq.file)
