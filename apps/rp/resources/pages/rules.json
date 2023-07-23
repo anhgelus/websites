@@ -1,19 +1,19 @@
 [
   {
     "file": "rules.presentation",
-    "image": "/logo-low.jpg",
-    "alt": "",
+    "image": "/rules/write.jpg",
+    "alt": "En train d'écrire les règles",
     "asImage": true
   },
   {
     "file": "rules.rp",
-    "image": "",
-    "alt": "",
+    "image": "/rules/jail.jpg",
+    "alt": "Cellule de prison",
     "asImage": true
   },
   {
     "file": "rules.gameplay",
-    "image": "",
+    "image": "/projects/et-si-c-etait-un-jour-parmi-tant-d-autres/in-game.jpg",
     "alt": "",
     "asImage": true
   }
