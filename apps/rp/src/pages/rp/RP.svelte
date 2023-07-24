@@ -7,6 +7,7 @@
     import Button from "@anhgelus/ui/src/Atoms/Button/Button.svelte";
     import Prose from "@anhgelus/ui/src/Atoms/Contents/Prose.svelte";
     import {genLinkFromProject, genPathFromProject} from "@anhgelus/functions";
+    import Links from "@anhgelus/ui/src/Organisms/Contents/Links.svelte";
 
     export let bgColorAccent, bgColor;
     export let routeData = {
@@ -48,7 +49,7 @@
         return [c.presentation, c.story, c.content, c.rules]
     }
 
-    let links = () => project.content.links
+    let links = () => project.links
 
     let data = () => {
         return `<h2>Credits</h2><p>${project.credits}</p>`
@@ -128,6 +129,7 @@
     <div class="my-16 mx-8 xl:mx-0">
         <Prose data={data()} />
     </div>
+    <Links links={links()} />
 </section>
 
 <ButtonEndPage name="Retourner en haut" href="#tab" />

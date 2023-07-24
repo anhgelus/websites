@@ -11,15 +11,15 @@
     },
     "links": [
       {
-        "name": "Vidéo de présentation",
-        "href": "",
+        "name": "Modrinth",
+        "href": "https://modrinth.com/modpack/nohtis-apohcalyps",
         "primary": false,
         "secondary": false,
         "external": true
       },
       {
-        "name": "Playlist",
-        "href": "",
+        "name": "Reveal Trailer",
+        "href": "https://youtu.be/S3C4UwmK2GA",
         "primary": true,
         "secondary": false,
         "external": true
