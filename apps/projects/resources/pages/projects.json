@@ -31,23 +31,16 @@
           "external": true
         },
         {
+          "name": "Trailer",
+          "href": "https://youtu.be/bbyaySGHmLY",
+          "primary": true,
+          "secondary": false,
+          "external": true
+        },
+        {
           "name": "Modrinth",
           "href": "https://modrinth.com/modpack/nohtis-apohcalyps",
           "primary": true,
-          "secondary": false,
-          "external": true
-        },
-        {
-          "name": "Trailer",
-          "href": "https://www.youtu.be/9502A1sXTvM",
-          "primary": true,
-          "secondary": false,
-          "external": true
-        },
-        {
-          "name": "Extended Trailer",
-          "href": "https://www.youtu.be/WQr0w5KsNtI",
-          "primary": false,
           "secondary": false,
           "external": true
         }
