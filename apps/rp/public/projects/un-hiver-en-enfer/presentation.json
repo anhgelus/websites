@@ -1,0 +1,20 @@
+[
+  {
+    "file": "presentation.part1",
+    "image": "cucumbers.jpg",
+    "alt": "A cucumbers from Pixabay",
+    "asImage": true
+  },
+  {
+    "file": "presentation.part2",
+    "image": "",
+    "alt": "",
+    "asImage": false
+  },
+  {
+    "file": "presentation.part3",
+    "image": "",
+    "alt": "",
+    "asImage": false
+  }
+]

@@ -1,5 +1,33 @@
 [
   {
+    "name": "Un Hiver en Enfer",
+    "image": "wallpaper.jpg",
+    "description": "Hiver 2033, quelque part sur Terre - le premier depuis le début de l'infection.",
+    "content": {
+      "presentation": "presentation",
+      "story": "story",
+      "content": "content",
+      "rules": "rules"
+    },
+    "links": [
+      {
+        "name": "Modrinth",
+        "href": "https://modrinth.com/modpack/nohtis-apohcalyps",
+        "primary": false,
+        "secondary": false,
+        "external": true
+      },
+      {
+        "name": "Reveal Trailer",
+        "href": "https://youtube.com/watch?v=-GNj6gsGCz8",
+        "primary": true,
+        "secondary": false,
+        "external": true
+      }
+    ],
+    "credits": "Ce projet a été organisé et réalisé par anhgelus."
+  },
+  {
     "name": "Et si c'était un jour parmi tant d'autres ?",
     "image": "wallpaper.jpg",
     "description": "Un RP dans un monde post-apocalyptique zombie sur Minecraft",
